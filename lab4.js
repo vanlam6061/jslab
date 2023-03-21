@@ -1,13 +1,13 @@
 "use strict";
 //lab 4.1
-// function describeCountry(country, population, capitalCity) {
-//   console.log(
-//     `${country} has ${population} milion people and its capital city is ${capitalCity}`
-//   );
-// }
-// describeCountry("Finland", 6, "Helsinki");
-// describeCountry("Vietnam", 100, "Hanoi");
-// describeCountry("India", 1500, "New Delhi");
+function describeCountry(country, population, capitalCity) {
+  console.log(
+    `${country} has ${population} milion people and its capital city is ${capitalCity}`
+  );
+}
+describeCountry("Finland", 6, "Helsinki");
+describeCountry("Vietnam", 100, "Hanoi");
+describeCountry("India", 1500, "New Delhi");
 //Lab 4.2
 function percentageOfWorld(population) {
   let percentage = (population * 100) / 7900;
@@ -45,3 +45,20 @@ for (let i = 0; i < arrayOfPopulation.length; i++) {
 }
 console.log(percentage);
 //lab 4.6
+let arrNeighbour = ["lao", "combodia", "China"];
+arrNeighbour.push("Utopia");
+
+console.log(arrNeighbour);
+arrNeighbour.pop();
+console.log(arrNeighbour);
+
+arrNeighbour.forEach((arr) => {
+  arr === "Germany"
+    ? console.log("Probably not a centure European country :D")
+    : console.log("Probably centure European country :D");
+});
+arrNeighbour.forEach((arr) => {
+  if ((arr = "lao")) {
+    arr = "Republic of Sweden";
+  }
+});
