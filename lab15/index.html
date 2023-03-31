@@ -8,21 +8,18 @@
   </head>
   <body>
     <label for="image-url">Enter image URL:</label>
-    <input type="file" id="image-url" name="image-url" accept=".jpeg" />
-    <!-- <input
-      type="text"
-      id="image-url"
-      name="image-url"
-      placeholder="https://example.com/image.png"
-    /> -->
+    <input type="file" id="image-url" name="image-url" />
     <button onclick="displayImage()">Display Image</button>
-
     <script>
-      function displayImage() {
-        var imageUrl = document.getElementById("image-url").value;
-        var myImage = new Image();
-        myImage.src = imageUrl;
-        document.body.appendChild(myImage);
+      async function displayImage() {
+        try {
+          let imageUrl = await document.getElementById("image-url").value;
+          let myImage = document.createElement("img");
+          myImage.src = imageUrl;
+          document.body.appendChild(myImage);
+        } catch (error) {
+          console.error(error);
+        }
       }
     </script>
   </body>
