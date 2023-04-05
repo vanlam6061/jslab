@@ -13,9 +13,9 @@
     <script>
       async function displayImage() {
         try {
-          let imageUrl = await document.getElementById("image-url").value;
+          let imageUrl = await document.getElementById("image-url");
           let myImage = document.createElement("img");
-          myImage.src = imageUrl;
+          myImage.src = imageUrl.files[0].name;
           document.body.appendChild(myImage);
         } catch (error) {
           console.error(error);
