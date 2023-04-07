@@ -30,7 +30,7 @@
   let data = await fetch(`https://disease.sh/v3/covid-19/nyt/usa`);
    let jsonData = await data.json();
 	 let dataInPerior =jsonData.filter(e => {
-		e.date.match(/[2020]/g)
+		e.date.match(/"2020"/g)
 	});
 	console.log(dataInPerior);
 	plotData(dataInPerior)
